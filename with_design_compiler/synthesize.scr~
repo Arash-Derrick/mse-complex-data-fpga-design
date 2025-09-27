@@ -1,0 +1,71 @@
+# ===================================================================
+# Final Synthesis Script for mse_top.v
+# Based on the provided project guides (DC-PC.pdf and others)
+# ===================================================================
+
+# --- 1. SETUP: Define your design, clock, and corner ---
+
+# CHOOSE YOUR CORNER HERE: "typical", "slow", or "fast" 
+set my_corner "slow"
+
+# Design and file names (using lowercase as requested)
+set my_files     [list mse_top.v]
+set my_toplevel  "MSE_Top"
+
+# Clock definition
+set my_clock_pin    "clk"
+set my_clk_freq_MHz 100
+
+# Automatically set the library file based on the chosen corner
+set my_library_file "NanGate_${my_corner}.db"
+
+
+# --- 2. LIBRARIES ---
+define_design_lib WORK -path ./WORK
+set target_library $my_library_file
+set link_library   "* $target_library"
+
+
+# --- 3. READ AND ELABORATE THE DESIGN ---
+analyze -f verilog $my_files
+elaborate $my_toplevel
+current_design $my_toplevel
+link
+uniquify
+
+
+# --- 4. APPLY CONSTRAINTS ---
+# Set the operating conditions to match the chosen library
+set_operating_conditions $my_corner
+
+# Create the clock
+set my_period [expr 1000 / $my_clk_freq_MHz]
+create_clock -period $my_period [get_ports $my_clock_pin]
+
+# Set a goal for the tool to minimize area
+set_max_area 0
+
+
+# --- 5. COMPILE THE DESIGN ---
+# Synthesize the design with high effort for better results
+compile -map_effort high
+
+
+# --- 6. GENERATE REPORTS AND OUTPUTS ---
+# Create unique directories for this run's outputs
+file mkdir ./reports_${my_corner}
+file mkdir ./outputs_${my_corner}
+
+# Write the final reports
+report_area   > ./reports_${my_corner}/area.rpt
+report_timing > ./reports_${my_corner}/timing.rpt
+report_power  > ./reports_${my_corner}/power.rpt
+report_qor    > ./reports_${my_corner}/qor.rpt
+
+# Write the synthesized gate-level Verilog netlist and the SDF timing file
+write -f verilog -hierarchy -output ./outputs_${my_corner}/mse_top_netlist.v
+write_sdf ./outputs_${my_corner}/mse_top_timing.sdf
+
+
+echo ">> Synthesis for corner '$my_corner' finished successfully."
+quit

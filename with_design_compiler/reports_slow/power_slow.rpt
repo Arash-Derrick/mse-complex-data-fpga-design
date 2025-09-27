@@ -1,0 +1,40 @@
+Loading db file '/home/icic/Desktop/final_synthesis/NanGate_slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : MSE_Top
+Version: C-2009.06-SP5
+Date   : Fri Apr  4 04:07:13 2014
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary_PDKv1_2_v2008_10 (File: /home/icic/Desktop/final_synthesis/NanGate_slow.db)
+
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 160.2473 uW   (78%)
+  Net Switching Power  =  45.5851 uW   (22%)
+                         ---------
+Total Dynamic Power    = 205.8324 uW  (100%)
+
+Cell Leakage Power     =  17.5048 uW
+
+1

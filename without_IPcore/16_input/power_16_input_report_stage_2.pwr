@@ -1,0 +1,1017 @@
+--------------------------------------------------------------------
+|                      Xilinx XPower Analyzer                      |
+--------------------------------------------------------------------
+| Release                | 14.7 - P.20131013 (lin64)               |
+| Command Line           | Generated from Graphical User Interface |
+--------------------------------------------------------------------
+
+--------------------------------
+|      Table of Contents       |
+--------------------------------
+| 1.  Settings                 |
+| 1.1.  Project                |
+| 1.2.  Device                 |
+| 1.3.  Environment            |
+| 1.4.  Default Activity Rates |
+| 2.  Summary                  |
+| 2.1.  On-Chip Power Summary  |
+| 2.2.  Thermal Summary        |
+| 2.3.  Power Supply Summary   |
+| 2.4.  Confidence Level       |
+| 3.  Detailed Reports         |
+| 3.1.  By Hierarchy           |
+| 3.2.  By Clock Domain        |
+| 3.3.  By Resource Type       |
+| 3.3.1.  Core Dynamic         |
+| 3.3.1.1.  Logic              |
+| 3.3.1.2.  Signals            |
+| 3.3.1.3.  DSP                |
+| 3.3.2.  IO                   |
+| 4.  Warnings                 |
+--------------------------------
+
+1.  Settings
+1.1.  Project
+-------------------------------------------
+|                 Project                 |
+-------------------------------------------
+| Design File               | MSE_Top.ncd |
+| Settings File             | NA          |
+| Physical Constraints File | MSE_Top.pcf |
+| Simulation Activity File  | NA          |
+| Design Nets Matched       | NA          |
+| Simulation Nets Matched   | NA          |
+-------------------------------------------
+
+1.2.  Device
+-------------------------------------------------
+|                    Device                     |
+-------------------------------------------------
+| Family           | Spartan6                   |
+| Part             | xc6slx9                    |
+| Package          | tqg144                     |
+| Temp Grade       | C-Grade                    |
+| Process          | Typical                    |
+| Speed Grade      | -3                         |
+| Characterization | Production,v1.3,2011-05-04 |
+-------------------------------------------------
+
+1.3.  Environment
+---------------------------
+|       Environment       |
+---------------------------
+| Ambient Temp (C) | 25.0 |
+| Use custom TJA?  | No   |
+| Custom TJA (C/W) | NA   |
+| Airflow (LFM)    | 0    |
+| Heat Sink        | None |
+| Custom TSA (C/W) | NA   |
+---------------------------
+
+1.4.  Default Activity Rates
+----------------------------------
+|     Default Activity Rates     |
+----------------------------------
+| FF Toggle Rate (%)     | 12.5  |
+| I/O Toggle Rate (%)    | 12.5  |
+| Output Load (pF)       | 5.0   |
+| I/O Enable Rate (%)    | 100.0 |
+| BRAM Write Rate (%)    | 50.0  |
+| BRAM Enable Rate (%)   | 50.0  |
+| DSP Toggle Rate (%)    | 12.5  |
+----------------------------------
+
+2.  Summary
+2.1.  On-Chip Power Summary
+-----------------------------------------------------------------------------
+|                           On-Chip Power Summary                           |
+-----------------------------------------------------------------------------
+|        On-Chip        | Power (mW) |  Used  | Available | Utilization (%) |
+-----------------------------------------------------------------------------
+| Clocks                |       0.46 |      1 |    ---    |       ---       |
+| Logic                 |       0.00 |    170 |      5720 |               3 |
+| Signals               |       0.00 |    337 |    ---    |       ---       |
+| IOs                   |       0.00 |     87 |       102 |              85 |
+| DSPs                  |       0.00 |      3 |        16 |              19 |
+| Static Power          |      13.69 |        |           |                 |
+| Total                 |      14.14 |        |           |                 |
+-----------------------------------------------------------------------------
+
+2.2.  Thermal Summary
+------------------------------
+|      Thermal Summary       |
+------------------------------
+| Effective TJA (C/W) | 38.4 |
+| Max Ambient (C)     | 84.5 |
+| Junction Temp (C)   | 25.5 |
+------------------------------
+
+2.3.  Power Supply Summary
+---------------------------------------------------------
+|                 Power Supply Summary                  |
+---------------------------------------------------------
+|                      | Total | Dynamic | Static Power |
+---------------------------------------------------------
+| Supply Power (mW)    | 14.14 | 0.46    | 13.69        |
+---------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+|                                            Power Supply Currents                                            |
+---------------------------------------------------------------------------------------------------------------
+|     Supply Source     | Supply Voltage | Total Current (mA) | Dynamic Current (mA) | Quiescent Current (mA) |
+---------------------------------------------------------------------------------------------------------------
+| Vccint                |          1.200 |               4.45 |                 0.38 |                   4.07 |
+| Vccaux                |          2.500 |               2.52 |                 0.00 |                   2.52 |
+| Vcco25                |          2.500 |               1.00 |                 0.00 |                   1.00 |
+---------------------------------------------------------------------------------------------------------------
+
+2.4.  Confidence Level
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                                            Confidence Level                                                                                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|       User Input Data       | Confidence |                    Details                     |                                                   Action                                                   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Design implementation state | High       | Design is completely routed                    |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.  Details
+3.1.  By Hierarchy
+--------------------------------------------------------------------------------------------------------------
+|  By Hierarchy   | Power (mW) | Logic Power (mW) | Signal Power (mW) | # FFs  | # LUTs | # DSPs | # CARRY4s |
+--------------------------------------------------------------------------------------------------------------
+| Hierarchy total |   0.00     |   0.00           |   0.00            |    106 |    240 |      3 |     23    |
+|   MSE_Top       |   0.00     |   0.00           |   0.00            |    106 |    240 |      3 |     23    |
+--------------------------------------------------------------------------------------------------------------
+
+3.2.  By Clock Domain
+----------------------------------------------------------------------------------------------------------------------
+| By Clock Domain : 1 | Power (mW) | Freq (MHz) | Buffer | Buffer Enable (%) | Enable Signal | Fanout | Slice Fanout |
+----------------------------------------------------------------------------------------------------------------------
+| clk_BUFGP/IBUFG     |            |            |        |                   |               |        |              |
+|  Logic:             |            |            |        |                   |               |        |              |
+|   clk_BUFGP/BUFG    |       0.44 |       0.00 | BUFG   |                NA | NA            |     NA |           NA |
+|  Nets:              |            |            |        |                   |               |        |              |
+|   clk_BUFGP         |       0.01 |       0.00 | BUFG   |                NA | NA            |    106 |           25 |
+|   clk_BUFGP/IBUFG   |       0.00 |       0.00 | NA     |                NA | NA            |      1 |            1 |
+|                     |            |            |        |                   |               |        |              |
+| Total               |       0.46 |            |        |                   |               |        |              |
+----------------------------------------------------------------------------------------------------------------------
+
+3.3.  By Resource Type
+3.3.1.  Core Dynamic
+3.3.1.1.  Logic
+----------------------------------------------------------------------------------------------------------------------
+|                        Logic                        | Power (mW) |  Type  | Clock (MHz) | Clock Name | Signal Rate |
+----------------------------------------------------------------------------------------------------------------------
+| Eqn_01_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_101_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_10_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_110_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_111_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_11_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_121_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_12_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_131_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_13_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_141_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_14_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_151_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_15_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_161_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_16_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_171_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_17_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_181_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_18_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_191_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_19_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_1_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_201_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_20_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_211_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_21_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_221_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_22_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_231_mand1                                       |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_23_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_25_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_2_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_31_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_3_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_41_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_4_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_51_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_5_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_61_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_6_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_71_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_7_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_81_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_8_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_91_mand1                                        |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Eqn_9_mand1                                         |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_cy<12>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_imag_cy<16>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_imag_cy<20>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_imag_cy<4>                               |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_imag_cy<8>                               |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<10>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<11>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<12>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<13>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<14>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<15>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<16>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<17>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<18>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<19>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<1>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<20>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<21>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<22>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<23>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<24>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<2>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<3>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<4>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<5>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<6>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<7>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<8>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_lut<9>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_imag_xor<24>                             |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<11>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<15>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<19>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<23>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<3>                               |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_cy<7>                               |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<0>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<10>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<11>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<12>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<13>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<14>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<15>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<16>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<17>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<18>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<19>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<1>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<20>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<21>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<22>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<23>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<24>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<2>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<3>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<4>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<5>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<6>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<7>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<8>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_lut<9>                              |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Maccum_sum_real_xor<24>                             |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Mcount_counter_xor<3>111                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_cy<11>                             |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_diff_result_cy<3>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_diff_result_cy<7>                              |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<0>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<10>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<11>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<12>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<13>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<14>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<15>                            |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<1>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<2>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<3>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<4>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<5>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<6>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<7>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<8>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_lut<9>                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_diff_result_xor<15>                            |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<11>         |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<15>         |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<19>         |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<3>          |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<7>          |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<10>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<11>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<12>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<13>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<14>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<15>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<16>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<17>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<18>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<19>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<1>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<20>1_INV_0 |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<20>_INV_0  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<2>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<3>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<4>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<5>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<6>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<7>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<8>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_lut<9>_INV_0   |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_xor<21>        |       0.00 | CARRY4 |       Async | Async      |         0.0 |
+| _n0183_inv1_cepot_1_INV_0                           |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| _n0183_inv1_cepot_INV_0                             |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_0                                           |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| counter_0_rstpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_0_rstpot_SW0                                |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| counter_1                                           |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| counter_1_rstpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_1_rstpot_SW0                                |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_2                                           |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| counter_2_rstpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_2_rstpot_SW0                                |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_3                                           |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| counter_3_rstpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| counter_3_rstpot_SW0                                |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| done                                                |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_0                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_0_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_1                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_10                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_10_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_11                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_11_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_12                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_12_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_13                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_13_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_14                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_14_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_15                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_15_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_16                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_16_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_17                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_17_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_18                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_18_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_19                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_19_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_1_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_2                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_20                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_20_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_21                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_21_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_2_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_3                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_3_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_4                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_4_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_5                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_5_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_6                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_6_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_7                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_7_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_imag_8                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_8_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_imag_9                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_imag_9_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_0                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_0_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_1                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_10                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_10_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_11                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_11_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_12                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_12_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_13                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_13_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_14                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_14_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_15                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_15_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_16                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_16_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_17                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_17_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_18                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_18_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_19                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_19_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_1_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_2                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_20                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_20_dpot                                    |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_2_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_3                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_3_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_4                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_4_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_5                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_5_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_6                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_6_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_7                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_7_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| mse_real_8                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_8_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| mse_real_9                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| mse_real_9_dpot                                     |       0.00 | LUT5   |       Async | Async      |         0.0 |
+| state_FSM_FFd1                                      |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd1-In1                                  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| state_FSM_FFd1_1                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd1_2                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd1_3                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd2                                      |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd2-In1                                  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| state_FSM_FFd2_1                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd2_2                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd2_3                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_FSM_FFd2_4                                    |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| state_state[2]_GND_1_o_equal_27_o1                  |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag<4>_rt                                      |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_1                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_10                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_10_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_11                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_11_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_12                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_12_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_13                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_13_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_14                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_14_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_15                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_15_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_16                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_16_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_17                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_17_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_18                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_18_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_19                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_19_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_1_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_2                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_20                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_20_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_21                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_21_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_22                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_22_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_23                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_23_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_24                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_24_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_2_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_3                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_3_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_4                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_4_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_5                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_5_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_6                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_6_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_7                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_7_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_8                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_8_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_imag_9                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_imag_9_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_0                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_0_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_1                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_10                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_10_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_11                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_11_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_12                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_12_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_13                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_13_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_14                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_14_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_15                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_15_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_16                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_16_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_17                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_17_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_18                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_18_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_19                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_19_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_1_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_2                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_20                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_20_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_21                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_21_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_22                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_22_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_23                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_23_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_24                                         |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_24_dpot                                    |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_2_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_3                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_3_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_4                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_4_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_5                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_5_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_6                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_6_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_7                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_7_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_8                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_8_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+| sum_real_9                                          |       0.00 | FF     |         0.0 | clk_BUFGP  |         0.0 |
+| sum_real_9_dpot                                     |       0.00 | LUT6   |       Async | Async      |         0.0 |
+|                                                     |            |        |             |            |             |
+| Total                                               |       0.00 |        |             |            |             |
+----------------------------------------------------------------------------------------------------------------------
+
+3.3.1.2.  Signals
+------------------------------------------------------------------------------------------------------------------------------------
+|                   Signals                   | Power (mW) | Signal Rate | % High | Fanout | Slice Fanout |   Clock   | Logic Type |
+------------------------------------------------------------------------------------------------------------------------------------
+| Maccum_sum_imag_cy<12>                      |       0.00 |        0.00 |   25.1 |      1 |            1 | Async     | NA         |
+| Maccum_sum_imag_cy<16>                      |       0.00 |        0.00 |   24.9 |      1 |            1 | Async     | NA         |
+| Maccum_sum_imag_cy<20>                      |       0.00 |        0.00 |   24.8 |      1 |            1 | Async     | NA         |
+| Maccum_sum_imag_cy<4>                       |       0.00 |        0.00 |   32.9 |      1 |            1 | Async     | NA         |
+| Maccum_sum_imag_cy<8>                       |       0.00 |        0.00 |   27.4 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<11>                      |       0.00 |        0.00 |   25.6 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<15>                      |       0.00 |        0.00 |   25.0 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<19>                      |       0.00 |        0.00 |   24.9 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<23>                      |       0.00 |        0.00 |   24.8 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<3>                       |       0.00 |        0.00 |   32.9 |      1 |            1 | Async     | NA         |
+| Maccum_sum_real_cy<7>                       |       0.00 |        0.00 |   27.4 |      1 |            1 | Async     | NA         |
+| Mcount_counter_xor<3>11                     |       0.00 |        0.00 |   91.2 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_0   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_1   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_10  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_11  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_12  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_13  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_14  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_15  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_16  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_17  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_18  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_19  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_2   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_20  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_21  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_22  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_23  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_24  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_25  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_26  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_27  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_28  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_29  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_3   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_30  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_31  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_32  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_33  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_34  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_35  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_36  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_37  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_38  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_39  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_4   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_40  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_41  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_42  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_43  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_44  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_45  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_46  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_47  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_5   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_6   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_7   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_8   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Mmult_dr_dr_PCOUT_to_Maddsub_di_di_PCIN_9   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Msub_diff_result_cy<11>                     |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Msub_diff_result_cy<3>                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Msub_diff_result_cy<7>                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<11> |       0.00 |        0.00 |  100.0 |      1 |            1 | Async     | NA         |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<15> |       0.00 |        0.00 |  100.0 |      1 |            1 | Async     | NA         |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<19> |       0.00 |        0.00 |  100.0 |      1 |            1 | Async     | NA         |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<3>  |       0.00 |        0.00 |   90.6 |      1 |            1 | Async     | NA         |
+| Msub_sum_imag[24]_GND_1_o_sub_23_OUT_cy<7>  |       0.00 |        0.00 |   99.5 |      1 |            1 | Async     | NA         |
+| N12                                         |       0.00 |        0.00 |   54.4 |      1 |            1 | Async     | NA         |
+| N14                                         |       0.00 |        0.00 |    8.8 |      1 |            1 | Async     | NA         |
+| N16                                         |       0.00 |        0.00 |   91.9 |      1 |            1 | Async     | NA         |
+| N18                                         |       0.00 |        0.00 |    8.1 |      1 |            1 | Async     | NA         |
+| Result<0>1                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Result<10>                                  |       0.00 |        0.00 |   38.3 |      1 |            1 | Async     | NA         |
+| Result<10>1                                 |       0.00 |        0.00 |   38.0 |      1 |            1 | Async     | NA         |
+| Result<11>                                  |       0.00 |        0.00 |   37.6 |      1 |            1 | Async     | NA         |
+| Result<11>1                                 |       0.00 |        0.00 |   37.8 |      1 |            1 | Async     | NA         |
+| Result<12>                                  |       0.00 |        0.00 |   37.5 |      1 |            1 | Async     | NA         |
+| Result<12>1                                 |       0.00 |        0.00 |   37.7 |      1 |            1 | Async     | NA         |
+| Result<13>                                  |       0.00 |        0.00 |   37.4 |      1 |            1 | Async     | NA         |
+| Result<13>1                                 |       0.00 |        0.00 |   37.6 |      1 |            1 | Async     | NA         |
+| Result<14>                                  |       0.00 |        0.00 |   37.4 |      1 |            1 | Async     | NA         |
+| Result<14>1                                 |       0.00 |        0.00 |   37.5 |      1 |            1 | Async     | NA         |
+| Result<15>                                  |       0.00 |        0.00 |   37.4 |      1 |            1 | Async     | NA         |
+| Result<15>1                                 |       0.00 |        0.00 |   37.5 |      1 |            1 | Async     | NA         |
+| Result<16>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<16>1                                 |       0.00 |        0.00 |   37.4 |      1 |            1 | Async     | NA         |
+| Result<17>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<17>1                                 |       0.00 |        0.00 |   37.4 |      1 |            1 | Async     | NA         |
+| Result<18>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<18>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<19>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<19>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<1>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| Result<1>1                                  |       0.00 |        0.00 |   46.8 |      1 |            1 | Async     | NA         |
+| Result<20>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<20>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<21>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<21>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<22>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<22>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<23>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<23>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<24>                                  |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<24>1                                 |       0.00 |        0.00 |   37.3 |      1 |            1 | Async     | NA         |
+| Result<2>                                   |       0.00 |        0.00 |   46.8 |      1 |            1 | Async     | NA         |
+| Result<2>1                                  |       0.00 |        0.00 |   44.5 |      1 |            1 | Async     | NA         |
+| Result<3>                                   |       0.00 |        0.00 |   44.5 |      1 |            1 | Async     | NA         |
+| Result<3>1                                  |       0.00 |        0.00 |   42.7 |      1 |            1 | Async     | NA         |
+| Result<4>                                   |       0.00 |        0.00 |   42.7 |      1 |            1 | Async     | NA         |
+| Result<4>1                                  |       0.00 |        0.00 |   41.3 |      1 |            1 | Async     | NA         |
+| Result<5>                                   |       0.00 |        0.00 |   41.3 |      1 |            1 | Async     | NA         |
+| Result<5>1                                  |       0.00 |        0.00 |   40.3 |      1 |            1 | Async     | NA         |
+| Result<6>                                   |       0.00 |        0.00 |   40.3 |      1 |            1 | Async     | NA         |
+| Result<6>1                                  |       0.00 |        0.00 |   39.6 |      1 |            1 | Async     | NA         |
+| Result<7>                                   |       0.00 |        0.00 |   39.6 |      1 |            1 | Async     | NA         |
+| Result<7>1                                  |       0.00 |        0.00 |   39.0 |      1 |            1 | Async     | NA         |
+| Result<8>                                   |       0.00 |        0.00 |   39.0 |      1 |            1 | Async     | NA         |
+| Result<8>1                                  |       0.00 |        0.00 |   38.6 |      1 |            1 | Async     | NA         |
+| Result<9>                                   |       0.00 |        0.00 |   38.6 |      1 |            1 | Async     | NA         |
+| Result<9>1                                  |       0.00 |        0.00 |   38.3 |      1 |            1 | Async     | NA         |
+| _n0183_inv1_cepot                           |       0.00 |        0.00 |   88.7 |     24 |            6 | clk_BUFGP | FF         |
+| _n0183_inv1_cepot1                          |       0.00 |        0.00 |   88.7 |     25 |            7 | clk_BUFGP | FF         |
+| counter<0>                                  |       0.00 |        0.00 |   36.5 |      5 |            4 | clk_BUFGP | NA         |
+| counter<1>                                  |       0.00 |        0.00 |   44.4 |      6 |            4 | clk_BUFGP | NA         |
+| counter<2>                                  |       0.00 |        0.00 |   44.4 |      5 |            4 | clk_BUFGP | NA         |
+| counter<3>                                  |       0.00 |        0.00 |   44.4 |      5 |            4 | clk_BUFGP | NA         |
+| data_valid_IBUF                             |       0.00 |        0.00 |   50.0 |     54 |           53 | Async     | NA         |
+| diff_result<0>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<10>                             |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<11>                             |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<12>                             |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<13>                             |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<14>                             |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<15>                             |       0.00 |        0.00 |   50.0 |      2 |           33 | Async     | NA         |
+| diff_result<1>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<2>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<3>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<4>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<5>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<6>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<7>                              |       0.00 |        0.00 |   50.0 |      2 |           33 | Async     | NA         |
+| diff_result<8>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| diff_result<9>                              |       0.00 |        0.00 |   50.0 |      2 |            3 | Async     | NA         |
+| done_OBUF                                   |       0.00 |        0.00 |   17.6 |      1 |            1 | clk_BUFGP | NA         |
+| dr_di<0>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<10>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<11>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<12>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<13>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<14>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<15>                                   |       0.00 |        0.00 |   50.0 |      9 |            9 | Async     | NA         |
+| dr_di<1>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<2>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<3>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<4>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<5>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<6>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<7>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<8>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| dr_di<9>                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| mse_imag_0                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_1                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_10                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_11                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_12                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_13                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_14                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_15                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_16                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_17                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_18                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_19                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_2                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_20                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_21                                 |       0.00 |        0.00 |   50.0 |      5 |            5 | clk_BUFGP | NA         |
+| mse_imag_3                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_4                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_5                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_6                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_7                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_8                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_imag_9                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_0                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_1                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_10                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_11                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_12                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_13                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_14                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_15                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_16                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_17                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_18                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_19                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_2                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_20                                 |       0.00 |        0.00 |   50.0 |      6 |            6 | clk_BUFGP | NA         |
+| mse_real_3                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_4                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_5                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_6                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_7                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_8                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| mse_real_9                                  |       0.00 |        0.00 |   50.0 |      2 |            2 | clk_BUFGP | NA         |
+| product_real<0>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<10>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<11>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<12>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<13>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<14>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<15>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<16>                            |       0.00 |        0.00 |   50.0 |      9 |            9 | Async     | NA         |
+| product_real<1>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<2>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<3>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<4>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<5>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<6>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<7>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<8>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| product_real<9>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| reset_IBUF                                  |       0.00 |        0.00 |    1.0 |    106 |           25 | Async     | NA         |
+| start_IBUF                                  |       0.00 |        0.00 |   50.0 |     54 |           54 | Async     | NA         |
+| state_FSM_FFd1                              |       0.00 |        0.00 |   28.1 |     52 |           31 | clk_BUFGP | NA         |
+| state_FSM_FFd1-In                           |       0.00 |        0.00 |   11.3 |      4 |            3 | Async     | NA         |
+| state_FSM_FFd1_1                            |       0.00 |        0.00 |   11.3 |     32 |           16 | clk_BUFGP | NA         |
+| state_FSM_FFd1_2                            |       0.00 |        0.00 |   11.3 |     32 |           16 | clk_BUFGP | NA         |
+| state_FSM_FFd1_3                            |       0.00 |        0.00 |   11.3 |     32 |           17 | Async     | NA         |
+| state_FSM_FFd2                              |       0.00 |        0.00 |   37.5 |     99 |           62 | clk_BUFGP | FF         |
+| state_FSM_FFd2-In                           |       0.00 |        0.00 |   49.4 |      5 |            4 | Async     | NA         |
+| state_FSM_FFd2_1                            |       0.00 |        0.00 |   49.4 |     30 |           18 | clk_BUFGP | NA         |
+| state_FSM_FFd2_2                            |       0.00 |        0.00 |   49.4 |     30 |           15 | clk_BUFGP | NA         |
+| state_FSM_FFd2_3                            |       0.00 |        0.00 |   49.4 |     28 |           14 | clk_BUFGP | NA         |
+| state_FSM_FFd2_4                            |       0.00 |        0.00 |   49.4 |      8 |            8 | clk_BUFGP | NA         |
+| sum_imag<10>                                |       0.00 |        0.00 |   43.1 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<11>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<12>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<13>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<14>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<15>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<16>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<17>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<18>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<19>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<1>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_imag<20>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<21>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<22>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<23>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<24>                                |       0.00 |        0.00 |   43.1 |      4 |            4 | clk_BUFGP | NA         |
+| sum_imag<2>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_imag<3>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_imag<4>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<5>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<6>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<7>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<8>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag<9>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<0>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<10>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<11>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<12>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<13>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<14>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<15>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<16>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<17>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<18>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<19>         |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<1>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<20>         |       0.00 |        0.00 |   43.1 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<21>         |       0.00 |        0.00 |   43.1 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<2>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<3>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<4>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<5>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<6>          |       0.00 |        0.00 |   43.4 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<7>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<8>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_imag[24]_GND_1_o_sub_23_OUT<9>          |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| sum_real<0>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_real<10>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<11>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<12>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<13>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<14>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<15>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<16>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<17>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<18>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<19>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<1>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_real<20>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<21>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<22>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<23>                                |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<24>                                |       0.00 |        0.00 |   43.1 |      3 |            3 | clk_BUFGP | NA         |
+| sum_real<2>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_real<3>                                 |       0.00 |        0.00 |   50.0 |      3 |            2 | clk_BUFGP | NA         |
+| sum_real<4>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<5>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<6>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<7>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<8>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| sum_real<9>                                 |       0.00 |        0.00 |   50.0 |      4 |            3 | clk_BUFGP | NA         |
+| y_hat_in_0_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_10_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_11_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_12_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_13_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_14_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_15_IBUF                            |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_1_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_2_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_3_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_4_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_5_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_6_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_7_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_8_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_hat_in_9_IBUF                             |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_in_0_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_10_IBUF                                |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_11_IBUF                                |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_12_IBUF                                |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_13_IBUF                                |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_14_IBUF                                |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_15_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async     | NA         |
+| y_in_1_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_2_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_3_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_4_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_5_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_6_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_7_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_8_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+| y_in_9_IBUF                                 |       0.00 |        0.00 |   50.0 |      2 |            2 | Async     | NA         |
+|                                             |            |             |        |        |              |           |            |
+| Total                                       |       0.00 |             |        |        |              |           |            |
+------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.1.3.  DSP
+--------------------------------------------------------------------------------------------------------------------------------------
+|      DSP      | Power (mW) | Clock (MHz) | Clock Name | Signal Rate | MULT Used? | MREG Used? | Pre-Adder Used? | Post-Adder Used? |
+--------------------------------------------------------------------------------------------------------------------------------------
+| Maddsub_di_di |       0.00 |       Async | Async      |        0.00 | Yes        | No         | Yes             | Yes              |
+| Mmult_dr_di   |       0.00 |       Async | Async      |        0.00 | Yes        | No         | Yes             | Yes              |
+| Mmult_dr_dr   |       0.00 |       Async | Async      |        0.00 | Yes        | No         | Yes             | Yes              |
+|               |            |             |            |             |            |            |                 |                  |
+| Total         |       0.00 |             |            |             |            |            |                 |                  |
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.2.  IO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|         IO         | Power (mW) |   I/O Standard   | Signal Rate | % High | Clock (MHz) | Clock Name | Input Pins | Output Pins | Bidir Pins | Output Enable (%) | Output Load (pF) | Data Rate | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Vccint (mW) | Vccaux (mW) | Vcco On-Chip Termal (mW)  | Input Term. Type | Input R/RDIFF | Output Term. Type | Output R/RDIFF | Output RS | Vcco Supply Current (mA) |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| clk                |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| data_valid         |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| done.PAD           |       0.00 | LVCMOS25_12_SLOW |        0.00 |   17.6 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<0>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<10>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<11>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<12>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<13>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<14>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<15>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<16>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<17>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<18>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<19>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<1>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<20>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<21>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<22>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<23>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<24>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<2>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<3>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<4>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<5>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<6>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<7>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<8>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_imag<9>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<0>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<10>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<11>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<12>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<13>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<14>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<15>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<16>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<17>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<18>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<19>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<1>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<20>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<21>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<22>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<23>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<24>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<2>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<3>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<4>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<5>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<6>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<7>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<8>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| mse_real<9>        |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | clk_BUFGP  |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| reset              |       0.00 | LVCMOS25         |        0.00 |    1.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| start              |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<0>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<10>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<11>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<12>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<13>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<14>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<15>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<1>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<2>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<3>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<4>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<5>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<6>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<7>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<8>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_hat_in<9>        |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<0>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<10>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<11>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<12>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<13>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<14>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<15>           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<1>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<2>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<3>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<4>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<5>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<6>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<7>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<8>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| y_in<9>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async      |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Internal VREFs (0) |       0.00 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+|                    |            |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Total              |       0.00 |                  |             |        |             |            |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4.  Warnings
+--------------------------------------------------------------------------------
+WARNING:Power:1337 - Clock frequency for clock net "clk_BUFGP" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clk_BUFGP/IBUFG" is zero.
+WARNING:Power:1369 - Clock frequency for one or more clocks was not found through
+timing constraints (PCF file) or simulation data.  Without knowing the
+clock frequency of all clocks, dynamic power information for those clock
+domains will default to zero which may under-estimate the power for this
+design.  To avoid this warning, provide at least one of the following:
+  1. The proper timing constraints (PERIOD) for clocks (re-implement design
+     and load the newly generated PCF file into XPower Analyzer)
+  2. A post PAR simulation-generated VCD or SAIF file indicating clock
+     frequencies
+  3. The clock frequency for clocks in the "By Type -> Clocks" view in the
+     XPower Analyzer GUI and then applying "Update Power Analysis"
+--------------------------------------------------------------------------------
+
+Analysis completed: Mon Aug  4 06:46:57 2025
+----------------------------------------------------------------

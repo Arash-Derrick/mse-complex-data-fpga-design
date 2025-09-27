@@ -1,0 +1,25 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : area
+Design : MSE_Top
+Version: C-2009.06-SP5
+Date   : Fri Apr  4 04:07:13 2014
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary_PDKv1_2_v2008_10 (File: /home/icic/Desktop/final_synthesis/NanGate_slow.db)
+
+Number of ports:               87
+Number of nets:               712
+Number of cells:              489
+Number of references:          38
+
+Combinational area:       2075.597992
+Noncombinational area:     592.115996
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          2667.713989
+Total area:                 undefined
+1

@@ -1,0 +1,198 @@
+
+Started : "Synthesize - XST".
+Running xst...
+Command Line: xst -intstyle ise -ifn "/home/ise/MSE_Stage1_Final/MSE_Top.xst" -ofn "/home/ise/MSE_Stage1_Final/MSE_Top.syr"
+Reading design: MSE_Top.prj
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/MSE_Stage1_Final/ipcore_dir/complex_multiplier.v" into library work
+Parsing module <complex_multiplier>.
+Analyzing Verilog file "/home/ise/MSE_Stage1_Final/MSE_Top.v" into library work
+Parsing module <MSE_Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" Line 40: Port m_axis_dout_tvalid is not connected to this instance
+
+Elaborating module <MSE_Top>.
+
+Elaborating module <complex_multiplier>.
+WARNING:HDLCompiler:189 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" Line 47: Size mismatch in connection of port <m_axis_dout_tdata>. Formal port size is 48-bit while actual signal size is 51-bit.
+WARNING:HDLCompiler:413 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" Line 90: Result of 33-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" Line 91: Result of 33-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" Line 96: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MSE_Top>.
+    Related source file is "/home/ise/MSE_Stage1_Final/MSE_Top.v".
+        NUM_INPUTS = 8
+        LOG2_NUM_INPUTS = 3
+INFO:Xst:3210 - "/home/ise/MSE_Stage1_Final/MSE_Top.v" line 40: Output port <m_axis_dout_tvalid> of the instance <mult_inst> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <state>.
+    Found 3-bit register for signal <counter>.
+    Found 17-bit register for signal <sum_real>.
+    Found 17-bit register for signal <sum_imag>.
+    Found 17-bit register for signal <mse_real>.
+    Found 17-bit register for signal <mse_imag>.
+    Found 1-bit register for signal <done>.
+    Found 7-bit register for signal <data_valid_delay_sr>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <diff_result> created at line 36.
+    Found 18-bit subtractor for signal <n0070> created at line 105.
+    Found 33-bit adder for signal <n0060> created at line 90.
+    Found 33-bit adder for signal <n0061> created at line 91.
+    Found 3-bit adder for signal <counter[2]_GND_1_o_add_14_OUT> created at line 96.
+    Found 18-bit adder for signal <n0069> created at line 104.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  79 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <MSE_Top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+ 3-bit adder                                           : 1
+ 33-bit adder                                          : 2
+# Registers                                            : 7
+ 1-bit register                                        : 1
+ 17-bit register                                       : 4
+ 3-bit register                                        : 1
+ 7-bit register                                        : 1
+# Multiplexers                                         : 3
+ 17-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/complex_multiplier.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <complex_multiplier> for timing and area information for instance <mult_inst>.
+
+Synthesizing (advanced) Unit <MSE_Top>.
+The following registers are absorbed into accumulator <sum_real>: 1 register on signal <sum_real>.
+The following registers are absorbed into accumulator <sum_imag>: 1 register on signal <sum_imag>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <MSE_Top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 18-bit subtractor                                     : 1
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Accumulators                                         : 2
+ 17-bit up loadable accumulator                        : 2
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <mse_real_14> in Unit <MSE_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <mse_real_15> <mse_real_16> 
+INFO:Xst:2261 - The FF/Latch <mse_imag_14> in Unit <MSE_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <mse_imag_15> <mse_imag_16> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 11
+ 011   | 10
+-------------------
+
+Optimizing unit <MSE_Top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MSE_Top, actual ratio is 2.
+FlipFlop state_FSM_FFd1 has been replicated 3 time(s)
+FlipFlop state_FSM_FFd2 has been replicated 5 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 155   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.570ns (Maximum Frequency: 280.109MHz)
+   Minimum input arrival time before clock: 4.110ns
+   Maximum output required time after clock: 3.701ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+
+Process "Synthesize - XST" completed successfully
