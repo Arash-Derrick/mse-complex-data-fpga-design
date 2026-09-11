@@ -170,9 +170,4 @@ Both implementations mapped the complex multiplication to **three DSP48A1 slices
 ```
 
 ---
-
-## Authors
-**Arash Mirderrickvand**
-
-**Course:** System-on-Chip (SoC) Design
 **Target Platform:** Xilinx Spartan-6 FPGA
